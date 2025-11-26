@@ -1,9 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import axios from 'axios';
 
 export default function Product() {
+    interface MyData{
+    caption:string,
+    id:string,
+    photo_url:string
 
-    const[data,setData]=useState([]);
+  }
+
+    const[data,setData]=useState<MyData[]>([]);
 
     useEffect(()=>{
 

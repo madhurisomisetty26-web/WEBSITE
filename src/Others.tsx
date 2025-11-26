@@ -1,8 +1,15 @@
-import React, { useEffect, useState } from 'react'
+import  { useEffect, useState } from 'react'
 import axios from 'axios';
 
 export default function Others() {
-    const [data,setData]=useState([]);
+    interface MyData{
+    caption:string,
+    created_at:string,
+    photo_url:string
+
+  }
+    const [data,setData]=useState<MyData[]>([]);
+
 
     useEffect(()=>{ 
         axios.get("https://jsonfakery.com/photos/paginated")
